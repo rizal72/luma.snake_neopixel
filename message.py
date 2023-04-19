@@ -11,7 +11,7 @@ Displays an animated text.
 import sys
 import time
 import locale
-from getCustomMapping import getMapping
+from lib.getCustomMapping import getMapping
 from luma.led_matrix.device import neopixel
 from luma.core.legacy import show_message
 from luma.core.legacy.font import proportional, CP437_FONT, LCD_FONT, ATARI_FONT

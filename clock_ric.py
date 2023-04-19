@@ -10,7 +10,7 @@ from luma.core.render import canvas
 from luma.core.legacy import text, show_message
 from luma.core.legacy.font import proportional, CP437_FONT, TINY_FONT, ATARI_FONT
 from PIL import ImageFont
-from getCustomMapping import getMapping
+from lib.getCustomMapping import getMapping
 
 color1 = "white"
 color2 = "yellow"

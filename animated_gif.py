@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 from PIL import Image, ImageSequence
 from luma.core.sprite_system import framerate_regulator
-from getCustomMapping import getMapping
+from lib.getCustomMapping import getMapping
 from luma.led_matrix.device import neopixel
 
 def main():
