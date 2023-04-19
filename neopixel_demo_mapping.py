@@ -14,7 +14,7 @@ from luma.led_matrix.device import neopixel
 from luma.core.render import canvas
 from luma.core.legacy import text, show_message
 from luma.core.legacy.font import proportional, TINY_FONT
-from getCustomMapping import getMapping
+from lib.getCustomMapping import getMapping
 
 # create matrix device
 device = neopixel(width=16, height=16, mapping=getMapping())

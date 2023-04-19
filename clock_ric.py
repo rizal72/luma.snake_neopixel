@@ -17,10 +17,6 @@ color2 = "yellow"
 locale.setlocale(locale.LC_ALL, '')
 fnt = proportional(ATARI_FONT)
 
-def make_font(name, size):
-    font_path = str(Path(__file__).resolve().parent.joinpath('luma.examples/examples/fonts', name))
-    return ImageFont.truetype(font_path, size)
-
 def minute_change(device):
     '''When we reach a minute change, animate it.'''
     hours = datetime.now().strftime('%H')
@@ -62,8 +58,6 @@ def main():
     device = neopixel(width=16, height=16, mapping=getMapping())
     device.contrast(16)
     
-    fntbmp = make_font("FreePixel.ttf", int(device.height / 2))
-   
     # The time ascends from the abyss...
     animation(device, -8, 1)
     
