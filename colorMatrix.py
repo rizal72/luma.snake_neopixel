@@ -18,7 +18,7 @@ def main():
                 time.sleep(0.1)
 
 def getRandomColor():
-    color = list(np.random.choice(range(256), size=3))
+    color = tuple(np.random.random(size=3) * 256)
     return color
 
 if __name__ == "__main__":
