@@ -13,12 +13,13 @@ def main():
     drawScreen(device)
 
 def drawScreen(device):
-    for y in range(device.height):
-        for x in range(device.width):
-            with canvas(device) as draw:
-                draw.point((x, y), fill=getRandomColor())
-                
-        time.sleep(1)
+    while device:
+        for y in range(device.height):
+            for x in range(device.width):
+                with canvas(device) as draw:
+                    draw.point((x, y), fill=getRandomColor())
+                    
+        #time.sleep(1)
 
 def getRandomColor():
     color = (randrange(255), randrange(255), randrange(255))
