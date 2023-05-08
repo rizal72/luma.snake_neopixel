@@ -24,8 +24,7 @@ def drawScreen(device):
                             
 
 def getRandomColor():
-    color = (randrange(255), randrange(255), randrange(255))
-    if color == (0,0,0): getRandomColor()
+    color = (randrange(10,255), randrange(10,255), randrange(10,255))
     return color
 
 if __name__ == "__main__":
