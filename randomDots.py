@@ -13,7 +13,7 @@ import random
 from luma.led_matrix.device import neopixel
 from luma.core.render import canvas
 from lib.getCustomMapping import getMapping
-
+from colorMatrix import getRandomColor
 
 def main():
     device = neopixel(width=16, height=16, mapping=getMapping())
@@ -25,7 +25,7 @@ def main():
                 y = random.randint(0, device.height)
 
                 # 'draw' is an ImageDraw object.
-                draw.point((x, y), fill="white")
+                draw.point((x, y), fill=getRandomColor())
                 time.sleep(0.05)
 
 
