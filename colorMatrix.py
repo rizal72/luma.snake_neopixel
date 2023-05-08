@@ -3,6 +3,7 @@
 
 import time
 import random
+import numpy as np
 from luma.led_matrix.device import neopixel
 from luma.core.render import canvas
 from lib.getCustomMapping import getMapping
@@ -17,7 +18,7 @@ def main():
                 time.sleep(0.1)
 
 def getRandomColor():
-    color = random.choices(range(256), k=3)
+    color = list(np.random.choice(range(256), size=3))
     return color
 
 if __name__ == "__main__":
