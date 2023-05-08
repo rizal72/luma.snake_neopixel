@@ -10,8 +10,6 @@ from lib.getCustomMapping import getMapping
 
 def main():
     device = neopixel(width=16, height=16, mapping=getMapping())
-    # override the cleanup method
-    device.cleanup = do_nothing
     drawScreen(device)
 
 def do_nothing(obj):
@@ -21,6 +19,7 @@ def drawScreen(device):
     for y in range(device.height):
         for x in range(device.width):
             with canvas(device) as draw:
+                device.cleanup = do_nothing
                 draw.point((x, y), fill=getRandomColor())
                     
         #time.sleep(1)
