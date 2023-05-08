@@ -11,10 +11,10 @@ from lib.getCustomMapping import getMapping
 def main():
     device = neopixel(width=16, height=16, mapping=getMapping())
 
-    for i in range(device.height):
-        for l in range(device.width):
+    for y in range(device.height):
+        for x in range(device.width):
             with canvas(device) as draw:
-                draw.point((i, l), fill=getRandomColor())
+                draw.point((x, y), fill=getRandomColor())
                 time.sleep(0.1)
 
 def getRandomColor():
