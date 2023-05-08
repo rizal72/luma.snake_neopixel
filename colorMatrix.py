@@ -17,7 +17,7 @@ def do_nothing(obj):
 
 def drawScreen(device):
      # override the cleanup method
-    device.cleanup = do_nothing
+    # device.cleanup = do_nothing
     
     for y in range(device.height):
         for x in range(device.width):
