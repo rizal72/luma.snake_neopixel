@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import time
-import random
-import numpy as np
+from random import randrange
+#import numpy as np
 from luma.led_matrix.device import neopixel
 from luma.core.render import canvas
 from lib.getCustomMapping import getMapping
@@ -18,7 +18,7 @@ def main():
                 time.sleep(0.1)
 
 def getRandomColor():
-    color = tuple(np.random.random(size=3) * 256)
+    color = (randrange(255), randrange(255), randrange(255))
     return color
 
 if __name__ == "__main__":
