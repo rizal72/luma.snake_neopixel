@@ -26,7 +26,8 @@ def main():
 
                 # 'draw' is an ImageDraw object.
                 draw.point((x, y), fill=getRandomColor())
-                time.sleep(0.05)
+        
+        time.sleep(0.05)
 
 
 if __name__ == "__main__":
