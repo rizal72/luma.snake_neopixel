@@ -19,11 +19,12 @@ def drawScreen(device):
      # override the cleanup method
     # device.cleanup = do_nothing
     
-    for y in range(device.height):
-        for x in range(device.width):
-            with canvas(device) as draw:
-                draw.point((x, y), fill=getRandomColor())
-                    
+    while True:
+        with canvas(device) as draw:
+            for y in range(device.height):
+                for x in range(device.width):
+                    draw.point((x, y), fill=getRandomColor())
+                            
         #time.sleep(1)
 
 def getRandomColor():
