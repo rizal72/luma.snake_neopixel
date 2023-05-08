@@ -13,12 +13,7 @@ def main():
     device.contrast(10)
     drawScreen(device)
 
-def do_nothing(obj):
-    pass
-
 def drawScreen(device):
-     # override the cleanup method
-    # device.cleanup = do_nothing
     
     while True:
         with canvas(device) as draw:
@@ -30,6 +25,7 @@ def drawScreen(device):
 
 def getRandomColor():
     color = (randrange(255), randrange(255), randrange(255))
+    if color == (0,0,0): getRandomColor()
     return color
 
 if __name__ == "__main__":
