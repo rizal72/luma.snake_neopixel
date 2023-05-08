@@ -20,7 +20,7 @@ def main():
 
     while True:
         with canvas(device) as draw:
-            for i in range(4):
+            for i in range(256):
                 x = random.randint(0, device.width)
                 y = random.randint(0, device.height)
 
