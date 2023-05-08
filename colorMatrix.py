@@ -16,15 +16,15 @@ def do_nothing(obj):
     pass
 
 def drawScreen(device):
-    device.cleanup = do_nothing
+     # override the cleanup method
+    device.cleanup = do_nothing()
+    
     for y in range(device.height):
-        device.cleanup = do_nothing
         for x in range(device.width):
-            device.cleanup = do_nothing
             with canvas(device) as draw:
-                device.cleanup = do_nothing
                 draw.point((x, y), fill=getRandomColor())
-                time.sleep(1)
+                    
+        #time.sleep(1)
 
 def getRandomColor():
     color = (randrange(255), randrange(255), randrange(255))
