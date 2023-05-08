@@ -17,7 +17,8 @@ def drawScreen(device):
         for x in range(device.width):
             with canvas(device) as draw:
                 draw.point((x, y), fill=getRandomColor())
-                #time.sleep(0.1)
+                
+        time.sleep(1)
 
 def getRandomColor():
     color = (randrange(255), randrange(255), randrange(255))
