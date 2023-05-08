@@ -10,7 +10,7 @@ from lib.getCustomMapping import getMapping
 
 def main():
     device = neopixel(width=16, height=16, mapping=getMapping())
-    #device.contrast(10)
+    device.contrast(50)
     drawScreen(device)
 
 def drawScreen(device):
